@@ -28,6 +28,7 @@ function promptRunInput() {
                     return 'Enter a valid guess:';
                 }
             }
+
         ]).then(function(answer) {
             // grabs userGuess 
             var userGuess = anwser.userGuess.toUpperCase();
@@ -52,12 +53,12 @@ function promptRunInput() {
                 console.log("Correct Answer" + " " + game.motorcycle.getMotorcycleToShow());
             } else if (game.remainingLives > 0) {
                 promptRunInput();
-            } else }
+            } else {
             game.loss++;
             console.log("You Lost");
         }
-    }
-});
+    });
+
 
 // starts the game
 startHangman();
