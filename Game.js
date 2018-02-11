@@ -18,16 +18,16 @@ function GameJS() {
         // start with empty used alphabet
         this.usedAlpha = [];
         // generates random motorcyle from array
-        this.car = thiscreateRandomMotorcycle();
+        this.motorcycle = thiscreateRandomMotorcycle();
     }
 }
 
-this.createRandomMotorcyle = function( {
+this.createRandomMotorcyle = function() {
     var randomMotorcycle = motorcycles_list[Math.floor(Match.random()* motorcycles_list.length)];
 
     // reeturns random motorycle from array
     return new Motorcycle(randomMotorcycle);
-})
+}
 
 this.produceOutcomes = function (str) {
     // start of case statement
@@ -36,7 +36,7 @@ this.produceOutcomes = function (str) {
             console.log('You are correct!');
             break;
         case "wrong":
-            console.log(You are wrong!);
+            console.log('You are wrong!');
             console.log('You have', this.remainingLives + "lives left");
             break;
         case "already":
@@ -48,4 +48,4 @@ this.produceOutcomes = function (str) {
     }
 }
 
-module.exports = GamesJS;
+module.exports = GameJS;

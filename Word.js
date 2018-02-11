@@ -10,11 +10,11 @@ function Motorcycle(target) {
     this.createDisplayMotorcycle = function() {
         var motorcycleArray = [];
 
-        for (var i = 0; i < this.target.lenght; i++) {
+        for (var i = 0; i < this.target.length; i++) {
             if (alphabetSoupExpression.test(this.target[i])){
                 motorcycleArray.push(new Letter(this.target[i].toUpperCase()));
             } else {
-        } 
+         
             motorcycleArray.push(this.target[i])
         }
     }
@@ -52,5 +52,5 @@ this.getMotorcycleToShow = function() {
     }
     return show;
 }
-
+};
 module.exports = Motorcycle;
